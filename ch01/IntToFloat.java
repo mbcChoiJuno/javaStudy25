@@ -1,6 +1,6 @@
 package ch01;
 
-//Ä³½ºÆÃ Å×½ºÆ® (Çüº¯È¯)
+//ìºìŠ¤íŒ… í…ŒìŠ¤íŠ¸ (í˜•ë³€í™˜)
 public class IntToFloat {
 
 	public static void main(String[] args) {
@@ -25,17 +25,17 @@ public class IntToFloat {
 		System.out.println(String.format(("num3 : %f"), num3));
 
 		int result = num1 - num2;
-		System.out.println("float À¸·Î ´Ù³à¿Â ÈÄ¿¡ num2 °ª º¯°æµÊ"); // 
+		System.out.println("float ìœ¼ë¡œ ë‹¤ë…€ì˜¨ í›„ì— num2 ê°’ ë³€ê²½ë¨"); // 
 		System.out.println("num1 - num2 : " + result); // 
 	}
 }
 
-//½ÇÇà°á°ú
+//ì‹¤í–‰ê²°ê³¼
 //num1 : 123456780
 //num2 : 123456784
 //num3 : 1.23456784E8
 //num1 : 123456780
 //num2 : 123456784
 //num3 : 123456784.000000
-//float À¸·Î ´Ù³à¿Â ÈÄ¿¡ num2 °ª º¯°æµÊ
+//float ìœ¼ë¡œ ë‹¤ë…€ì˜¨ í›„ì— num2 ê°’ ë³€ê²½ë¨
 //num1 - num2 : -4

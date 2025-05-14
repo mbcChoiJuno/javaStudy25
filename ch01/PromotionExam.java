@@ -1,11 +1,11 @@
 package ch01;
 
-// ÇÁ·Î¸ğ¼Ç Å×½ºÆ® (Çüº¯È¯)
+// í”„ë¡œëª¨ì…˜ í…ŒìŠ¤íŠ¸ (í˜•ë³€í™˜)
 public class PromotionExam {
 
 	public static void main(String[] args) {
 
-		// ÀÛÀº Å¸ÀÔ >> Å« Å¸ÀÔ
+		// ì‘ì€ íƒ€ì… >> í° íƒ€ì…
 		// byte(1) short(2) int(4) float(4) long(8) double(8)
 
 		doPromotion();
@@ -16,27 +16,27 @@ public class PromotionExam {
 		byte byteValue = 10;
 		int intValue = byteValue;
 		
-		System.out.println(String.format("ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ int : %d", intValue)); // byte to int
+		System.out.println(String.format("ìë™íƒ€ì… ë³€í˜•ëœ int : %d", intValue)); // byte to int
 	
-		char charValue = '°¡';
+		char charValue = 'ê°€';
 		intValue = charValue;
-		System.out.println(String.format("ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ int : %d", intValue)); // char to int
+		System.out.println(String.format("ìë™íƒ€ì… ë³€í˜•ëœ int : %d", intValue)); // char to int
 		
 		intValue = 500;
 		long longValue = intValue;
-		System.out.println(String.format("ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ long : %d", longValue)); // int to long
+		System.out.println(String.format("ìë™íƒ€ì… ë³€í˜•ëœ long : %d", longValue)); // int to long
 		
 		double doubleValue = intValue;
-		System.out.println(String.format("ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ double : %01.01f", doubleValue)); // int to double
-		System.out.println("ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ double : " + doubleValue); // int to double
+		System.out.println(String.format("ìë™íƒ€ì… ë³€í˜•ëœ double : %01.01f", doubleValue)); // int to double
+		System.out.println("ìë™íƒ€ì… ë³€í˜•ëœ double : " + doubleValue); // int to double
 		
 	}
 
 }
 
-//½ÇÇà°á°ú
-//ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ int : 10
-//ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ int : 44032
-//ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ long : 500
-//ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ double : 500.0
-//ÀÚµ¿Å¸ÀÔ º¯ÇüµÈ double : 500.0
+//ì‹¤í–‰ê²°ê³¼
+//ìë™íƒ€ì… ë³€í˜•ëœ int : 10
+//ìë™íƒ€ì… ë³€í˜•ëœ int : 44032
+//ìë™íƒ€ì… ë³€í˜•ëœ long : 500
+//ìë™íƒ€ì… ë³€í˜•ëœ double : 500.0
+//ìë™íƒ€ì… ë³€í˜•ëœ double : 500.0

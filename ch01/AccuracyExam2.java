@@ -1,12 +1,12 @@
 package ch01;
 
-// Á¤È®ÇÑ °è»êÀÌ ÇÊ¿äÇÒ ¶§ ¹æ¹ı 
+// ì •í™•í•œ ê³„ì‚°ì´ í•„ìš”í•  ë•Œ ë°©ë²• 
 
-// 1. Á¤¼öÇüÀ» ÀÌ¿ëÇØ °è»êÇÑ´Ù.
+// 1. ì •ìˆ˜í˜•ì„ ì´ìš©í•´ ê³„ì‚°í•œë‹¤.
 
-// 2. BigDecimalÀ» ÀÌ¿ëÇÑ´Ù. (¼ö¾÷³»¿ë ¾Æ´Ô)
+// 2. BigDecimalì„ ì´ìš©í•œë‹¤. (ìˆ˜ì—…ë‚´ìš© ì•„ë‹˜)
 
-// Á¤¼öÇüÀ» ÀÌÄOÇØ Á¤È®ÇÑ °è»ê
+// ì •ìˆ˜í˜•ì„ ì´ìš©í•´ ì •í™•í•œ ê³„ì‚°
 public class AccuracyExam2 {
 
 	public static void main(String[] args) {
@@ -17,10 +17,10 @@ public class AccuracyExam2 {
 		int tmp = totalPieces - subPiece;
 
 		float result = tmp / 10.0f;
-		System.out.println("³²Àº »ç°ú Á¶°¢ ¼ö : " + result);
+		System.out.println("ë‚¨ì€ ì‚¬ê³¼ ì¡°ê° ìˆ˜ : " + result);
 	}
 
 }
 
-//½ÇÇà °á°ú
-//³²Àº »ç°ú Á¶°¢ ¼ö : 0.3
+//ì‹¤í–‰ ê²°ê³¼
+//ë‚¨ì€ ì‚¬ê³¼ ì¡°ê° ìˆ˜ : 0.3

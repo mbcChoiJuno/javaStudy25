@@ -2,27 +2,27 @@ package ch01;
 
 import java.util.Scanner;
 
-// Scanner ╟╢ц╪ ев╫╨ф╝
-// ╩Огв ©╛╩Йюз╥н х╕б╕ ╠╦╨п
+// Scanner Й╟²Л╡╢ М┘▄Л┼╓М┼╦
+// Л┌╪М∙╜ Л≈╟Л┌╟Л·░К║° М≥─Л╖² Й╣╛К╤└
 public class Exam2 {
 
 	public static void main(String[] args) {
 
 		Scanner scan =  new Scanner(System.in);
 		
-		System.out.print("а╓╪Ж╦╕ ют╥бго╪╪©Д >>> ");
+		System.out.print("Л═∙Л┬≤К╔╪ Л·┘К═╔М∙≤Л└╦Л ■ >>> ");
 		
 		int num = scan.nextInt();
 		
-		System.out.println( (num % 2 == 0) ? "б╕╪Ж" : "х╕╪Ж");
+		System.out.println( (num % 2 == 0) ? "Л╖²Л┬≤" : "М≥─Л┬≤");
 
 	}
 
 }
 
-//╫ггЮ╟А╟З
-//а╓╪Ж╦╕ ют╥бго╪╪©Д >>> 1
-//х╕╪Ж
+//Л▀╓М√┴Й╡╟ЙЁ╪
+//Л═∙Л┬≤К╔╪ Л·┘К═╔М∙≤Л└╦Л ■ >>> 1
+//М≥─Л┬≤
 
-//а╓╪Ж╦╕ ют╥бго╪╪©Д >>> 2
-//б╕╪Ж
+//Л═∙Л┬≤К╔╪ Л·┘К═╔М∙≤Л└╦Л ■ >>> 2
+//Л╖²Л┬≤

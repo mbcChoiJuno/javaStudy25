@@ -1,22 +1,19 @@
 package ch01;
 
-// print¹® Å×½ºÆ®
+// í”„ë¦°íŠ¸ë¬¸ ìˆ˜ì—…
 public class RunStateExam {
 	
 	public static void main(String[] args) {
 		
-		int x = 1; //
-		int y = 2; //
+		int x = 1; 
+		int y = 2; 
 		
-		//
 		int result = x + y; 
 
-		//
 		System.out.println(" x + y = "+result);
 		
 	}
 
 }
 
-//½ÇÇà°á°ú
 // x + y = 3

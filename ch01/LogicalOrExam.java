@@ -2,37 +2,37 @@ package ch01;
 
 import java.util.Scanner;
 
-// ³í¸®ÇÕ Å×½ºÆ®¿ë
+// ë…¼ë¦¬í•© í…ŒìŠ¤íŠ¸ìš©
 public class LogicalOrExam {
 
 	public static void main(String[] args) {
 
-		// Å°º¸µå·Î ÀÔ·Â¹ÞÀº ¼ýÀÚ°¡ 2ÀÇ ¹è¼öÀÌ°Å³ª 3ÀÇ ¹è¼öÀÎ °ÍÀ» Ã³¸®ÇØº»´Ù.
+		// í‚¤ë³´ë“œë¡œ ìž…ë ¥ë°›ì€ ìˆ«ìžê°€ 2ì˜ ë°°ìˆ˜ì´ê±°ë‚˜ 3ì˜ ë°°ìˆ˜ì¸ ê²ƒì„ ì²˜ë¦¬í•´ë³¸ë‹¤.
 		
 		Scanner input = new Scanner(System.in);
 		
 		while (true) {
-			System.out.print("ÀÔ·ÂÇÑ Á¤¼ö°¡ 2³ª 3ÀÇ ¹è¼öÀÎÁö È®ÀÎÇÕ´Ï´Ù. >>> ");
+			System.out.print("ìž…ë ¥í•œ ì •ìˆ˜ê°€ 2ë‚˜ 3ì˜ ë°°ìˆ˜ì¸ì§€ í™•ì¸í•©ë‹ˆë‹¤. >>> ");
 			
 			int num = input.nextInt();
 			
 			if ((num % 2 == 0) || (num % 3 == 0)) {
 				
-				System.out.printf("%d : %dÀÇ ¹è¼öÀÔ´Ï´Ù.\n", num, ((num % 2 == 0) ? 2 : 3));
+				System.out.printf("%d : %dì˜ ë°°ìˆ˜ìž…ë‹ˆë‹¤.\n", num, ((num % 2 == 0) ? 2 : 3));
 				
 			} else {
 				
-				System.out.printf("%d : 2³ª 3ÀÇ ¹è¼ö°¡ ¾Æ´Õ´Ï´Ù.\n", num);
+				System.out.printf("%d : 2ë‚˜ 3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.\n", num);
 				
 			}
 		}
 	}
 }
 
-//½ÇÇà°á°ú
-//ÀÔ·ÂÇÑ Á¤¼ö°¡ 2³ª 3ÀÇ ¹è¼öÀÎÁö È®ÀÎÇÕ´Ï´Ù. >>> 3
-//3 : 3ÀÇ ¹è¼öÀÔ´Ï´Ù.
-//ÀÔ·ÂÇÑ Á¤¼ö°¡ 2³ª 3ÀÇ ¹è¼öÀÎÁö È®ÀÎÇÕ´Ï´Ù. >>> 2
-//2 : 2ÀÇ ¹è¼öÀÔ´Ï´Ù.
-//ÀÔ·ÂÇÑ Á¤¼ö°¡ 2³ª 3ÀÇ ¹è¼öÀÎÁö È®ÀÎÇÕ´Ï´Ù. >>> 7
-//7 : 2³ª 3ÀÇ ¹è¼ö°¡ ¾Æ´Õ´Ï´Ù.
+//ì‹¤í–‰ê²°ê³¼
+//ìž…ë ¥í•œ ì •ìˆ˜ê°€ 2ë‚˜ 3ì˜ ë°°ìˆ˜ì¸ì§€ í™•ì¸í•©ë‹ˆë‹¤. >>> 3
+//3 : 3ì˜ ë°°ìˆ˜ìž…ë‹ˆë‹¤.
+//ìž…ë ¥í•œ ì •ìˆ˜ê°€ 2ë‚˜ 3ì˜ ë°°ìˆ˜ì¸ì§€ í™•ì¸í•©ë‹ˆë‹¤. >>> 2
+//2 : 2ì˜ ë°°ìˆ˜ìž…ë‹ˆë‹¤.
+//ìž…ë ¥í•œ ì •ìˆ˜ê°€ 2ë‚˜ 3ì˜ ë°°ìˆ˜ì¸ì§€ í™•ì¸í•©ë‹ˆë‹¤. >>> 7
+//7 : 2ë‚˜ 3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹™ë‹ˆë‹¤.

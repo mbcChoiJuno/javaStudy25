@@ -1,18 +1,18 @@
 package ch01;
 
-// º¯¼ö ¼±¾ğ ¿¬½À
+// ë³€ìˆ˜ ì„ ì–¸ ì—°ìŠµ
 public class VarExam {
 
 	public static void main(String[] args) {
 		
-		// º¯¼ö¼±¾ğ Å×½ºÆ®
-		int x = 1; // Á¤¼öÅ¸ÀÔ x º¯¼ö¿¡ 1°ªÀ» ³Ö´Â´Ù.
+		// ë³€ìˆ˜ì„ ì–¸ í…ŒìŠ¤íŠ¸
+		int x = 1; // ì •ìˆ˜íƒ€ì… x ë³€ìˆ˜ì— 1ê°’ì„ ë„£ëŠ”ë‹¤.
 		
-		char y = 65; // char´Â ¹®ÀÚÅ¸ÀÔÀÎµ¥ ¼ıÀÚ·Î º¯È¯µÊ
-					// ÄÄÇ»ÅÍ´Â ¹®ÀÚ¸¦ À¯´ÏÄÚµå·Î º¯È¯ÇØ¼­ Ã³¸®ÇÔ
-					// À¯´ÏÄÚµå Ç¥¿¡ 65´Â A
+		char y = 65; // charëŠ” ë¬¸ìíƒ€ì…ì¸ë° ìˆ«ìë¡œ ë³€í™˜ë¨
+					// ì»´í“¨í„°ëŠ” ë¬¸ìë¥¼ ìœ ë‹ˆì½”ë“œë¡œ ë³€í™˜í•´ì„œ ì²˜ë¦¬í•¨
+					// ìœ ë‹ˆì½”ë“œ í‘œì— 65ëŠ” A
 		
-		char z = 'A'; // char Å¸ÀÔÀÇ z º¯¼ö¿¡ ¹®ÀÚ A¸¦ ³ÖÀ½
+		char z = 'A'; // char íƒ€ì…ì˜ z ë³€ìˆ˜ì— ë¬¸ì Aë¥¼ ë„£ìŒ
 		
 		System.out.println("int x = "+x);
 		System.out.println("char y = "+y);
@@ -21,12 +21,12 @@ public class VarExam {
 		
 		char z1 = 'b';
 		
-		// º¯¼öÀÇ ¼±¾ğ
-		int x1; // ÃÊ±âÈ­ ¾ÈµÈ º¯¼ö
+		// ë³€ìˆ˜ì˜ ì„ ì–¸
+		int x1; // ì´ˆê¸°í™” ì•ˆëœ ë³€ìˆ˜
 		x1 = 10;
 		System.out.println(x1);
 		
-		// ´ÙÁß º¯¼ö ¼±¾ğ
+		// ë‹¤ì¤‘ ë³€ìˆ˜ ì„ ì–¸
 		int kor, mat, eng, total, avg;
 		
 		kor = 90;
@@ -35,56 +35,56 @@ public class VarExam {
 		total = kor + mat + eng;
 		avg = total / 3;
 		
-		System.out.println("ÃÑÁ¡ : " + total);
-		System.out.println("Æò±Õ : " + avg);
+		System.out.println("ì´ì  : " + total);
+		System.out.println("í‰ê·  : " + avg);
 		
-		// º¯¼ö ÀÛ¼º ±ÔÄ¢
-		// Ã¹±ÛÀÚ ¿µ¹®, $, _ ·Î ½ÃÀÛ
-		// ½º³×ÀÌÅ© Ç¥±â¹ı
+		// ë³€ìˆ˜ ì‘ì„± ê·œì¹™
+		// ì²«ê¸€ì ì˜ë¬¸, $, _ ë¡œ ì‹œì‘
+		// ìŠ¤ë„¤ì´í¬ í‘œê¸°ë²•
 		
-		int price, $price, _price; // °¡±ŞÀû Æ¯¼ö¹®ÀÚ »ç¿ë Áö¾ç
+		int price, $price, _price; // ê°€ê¸‰ì  íŠ¹ìˆ˜ë¬¸ì ì‚¬ìš© ì§€ì–‘
 
 //		int 1v;
 //		int @speed;
 //		int $#value;
 		
-		char firstname = '±è';
-		char firstName = 'ÀÌ';
+		char firstname = 'ê¹€';
+		char firstName = 'ì´';
 
-		System.out.println("¼º : " + firstname);
-		System.out.println("¼º : " + firstName);
-		// º¯¼ö¸í¿¡ ´ë¼Ò¹®ÀÚ´Â ´Ù¸¥ º¯¼ö·Î ÀÎ½ÄÇÑ´Ù.
+		System.out.println("ì„± : " + firstname);
+		System.out.println("ì„± : " + firstName);
+		// ë³€ìˆ˜ëª…ì— ëŒ€ì†Œë¬¸ìëŠ” ë‹¤ë¥¸ ë³€ìˆ˜ë¡œ ì¸ì‹í•œë‹¤.
 		
-		// º¯¼ö¸í¿¡ ¿¹¾à¾î´Â »ç¿ëÇÒ ¼ö ¾ø´Ù.
-		// ¿¹¾à¾î´Â ÀÚ¹Ù¿¡¼­ ÀÌ¹Ì »ç¿ëÁßÀÎ ¿µ¹® (º¯¼ö, Å¬·¡½º)
+		// ë³€ìˆ˜ëª…ì— ì˜ˆì•½ì–´ëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ë‹¤.
+		// ì˜ˆì•½ì–´ëŠ” ìë°”ì—ì„œ ì´ë¯¸ ì‚¬ìš©ì¤‘ì¸ ì˜ë¬¸ (ë³€ìˆ˜, í´ë˜ìŠ¤)
 		// int char;
 		
 		
-		// ¸®ÅÍ·² : Á÷Á¢ ÀÔ·ÂµÈ °ª
-		int literal1 = 75; 	// 10Áø¼ö
-		int literal2 = 075;	// 8Áø¼ö
-		int literal3 = 0b0011;	// 2Áø¼ö
-		int literal4 = 0xA;	// 16Áø¼ö
+		// ë¦¬í„°ëŸ´ : ì§ì ‘ ì…ë ¥ëœ ê°’
+		int literal1 = 75; 	// 10ì§„ìˆ˜
+		int literal2 = 075;	// 8ì§„ìˆ˜
+		int literal3 = 0b0011;	// 2ì§„ìˆ˜
+		int literal4 = 0xA;	// 16ì§„ìˆ˜
 		
-		System.out.println("10Áø¼ö 75 :" + literal1);
-		System.out.println("8Áø¼ö 75 :" + literal2);
-		System.out.println("2Áø¼ö 0011 :" + literal3);
-		System.out.println("16Áø¼ö A :" + literal4);
+		System.out.println("10ì§„ìˆ˜ 75 :" + literal1);
+		System.out.println("8ì§„ìˆ˜ 75 :" + literal2);
+		System.out.println("2ì§„ìˆ˜ 0011 :" + literal3);
+		System.out.println("16ì§„ìˆ˜ A :" + literal4);
 		
 	}
 
 }
 
-//½ÇÇà°á°ú
+//ì‹¤í–‰ê²°ê³¼
 //int x = 1
 //char y = A
 //char z = A
 //10
-//ÃÑÁ¡ : 240
-//Æò±Õ : 80
-//¼º : ±è
-//¼º : ÀÌ
-//10Áø¼ö 75 :75
-//8Áø¼ö 75 :61
-//2Áø¼ö 0011 :3
-//16Áø¼ö A :10
+//ì´ì  : 240
+//í‰ê·  : 80
+//ì„± : ê¹€
+//ì„± : ì´
+//10ì§„ìˆ˜ 75 :75
+//8ì§„ìˆ˜ 75 :61
+//2ì§„ìˆ˜ 0011 :3
+//16ì§„ìˆ˜ A :10

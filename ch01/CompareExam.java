@@ -1,6 +1,6 @@
 package ch01;
 
-// µ¿µîºñ±³ Å×½ºÆ®
+// ë™ë“±ë¹„êµ í…ŒìŠ¤íŠ¸
 public class CompareExam {
 
 	public static void main(String[] args) {
@@ -10,11 +10,11 @@ public class CompareExam {
 
 	private static void doCompare() {
 
-		// µ¿µî ºñ±³¿Í, Å©±â ºñ±³
-		// == °°À½
-		// != ´Ù¸§
-		// >, >= ÃÊ°ú, ÀÌ»ó
-		// <, == ¹Ì¸¸, ÀÌÇÏ
+		// ë™ë“± ë¹„êµì™€, í¬ê¸° ë¹„êµ
+		// == ê°™ìŒ
+		// != ë‹¤ë¦„
+		// >, >= ì´ˆê³¼, ì´ìƒ
+		// <, == ë¯¸ë§Œ, ì´í•˜
 
 		int num1 = 10;
 		int num2 = 10;
@@ -40,7 +40,7 @@ public class CompareExam {
 		System.out.println(v4 == (double) v5);
 		System.out.println((int) v4 * 10 == (int) v5 * 10);
 
-		// ½Ç¼öÇü(¼Ò¼öÁ¡)Àº ºÎµ¿ ¼Ò¼öÁ¡ ¿¬»êÀ» ¼öÇàÇØ¼­ ±Ù»ç°ªÀ¸·Î Ç¥Çö
+		// ì‹¤ìˆ˜í˜•(ì†Œìˆ˜ì )ì€ ë¶€ë™ ì†Œìˆ˜ì  ì—°ì‚°ì„ ìˆ˜í–‰í•´ì„œ ê·¼ì‚¬ê°’ìœ¼ë¡œ í‘œí˜„
 
 //		// jo
 //		float eee = 10 / 3f;
@@ -51,7 +51,7 @@ public class CompareExam {
 
 }
 
-//½ÇÇà°á°ú
+//ì‹¤í–‰ê²°ê³¼
 //true
 //false
 //true

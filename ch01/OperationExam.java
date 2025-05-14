@@ -1,29 +1,29 @@
 package ch01;
 
-// ¸í·É ¿¬»êÀÚ Å×½ºÆ®
+// ëª…ë ¹ ì—°ì‚°ìž í…ŒìŠ¤íŠ¸
 public class OperationExam {
 
 	public static void main(String[] args) {
 		
-		// ´ÜÇ× Å×½ºÆ®
+		// ë‹¨í•­ í…ŒìŠ¤íŠ¸
 		int x = 10;
 		x++;
-		System.out.println("10¿¡ ++ ´ÜÇ× ¿¬»ê : " + x);
+		System.out.println("10ì— ++ ë‹¨í•­ ì—°ì‚° : " + x);
 		x--;
-		System.out.println("x¿¡ -- ´ÜÇ× ¿¬»ê : " + x);
+		System.out.println("xì— -- ë‹¨í•­ ì—°ì‚° : " + x);
 		
 		
-		// ÀÌÇ× Å×½ºÆ®
+		// ì´í•­ í…ŒìŠ¤íŠ¸
 		int y = 20;
 		int result = x+ y;
 		System.out.println(result);
 		
 		
-		// »ïÇ× Å×½ºÆ®
+		// ì‚¼í•­ í…ŒìŠ¤íŠ¸
 		boolean isBig = (result > 10) ? true : false;
 		System.out.println(isBig);
 		
-		String strResult = (result > 50) ? "Å©´Ù" : "ÀÛ´Ù";
+		String strResult = (result > 50) ? "í¬ë‹¤" : "ìž‘ë‹¤";
 		System.out.println(strResult);
 		
 		int x1 = 10 * 10;
@@ -36,34 +36,34 @@ public class OperationExam {
 		System.out.println("10%5="+x3);
 		
 		
-		//¹Ì¼Ç 3Ç× ¿¬»êÀÚ¸¦ »ç¿ëÇÏ¿© È¦Â¦ °è»êÀ» ÇØº¸ÀÚ
-		// È¦¼ö Â¦¼ö ±¸ºÐÇÏ±â
+		//ë¯¸ì…˜ 3í•­ ì—°ì‚°ìžë¥¼ ì‚¬ìš©í•˜ì—¬ í™€ì§ ê³„ì‚°ì„ í•´ë³´ìž
+		// í™€ìˆ˜ ì§ìˆ˜ êµ¬ë¶„í•˜ê¸°
 		int inputNumber = 11;
-		String strEven = ((inputNumber % 2) == 0 ? "Â¦¼ö" : "È¦¼ö");
+		String strEven = ((inputNumber % 2) == 0 ? "ì§ìˆ˜" : "í™€ìˆ˜");
 		System.out.println(String.format("%d = %s",  inputNumber, strEven));
 		
 		
-		//¹Ì¼Ç 3Ç× ¿¬»êÀÚ¸¦ »ç¿ëÇÏ¿© 4ÀÇ ¹è¼ö¸¦ Ã£¾Æº¸ÀÚ
-		// nÀÇ ¹è¼ö ±¸ºÐÇÏ±â
+		//ë¯¸ì…˜ 3í•­ ì—°ì‚°ìžë¥¼ ì‚¬ìš©í•˜ì—¬ 4ì˜ ë°°ìˆ˜ë¥¼ ì°¾ì•„ë³´ìž
+		// nì˜ ë°°ìˆ˜ êµ¬ë¶„í•˜ê¸°
 	    int multiple = 4;
 		
 		int inputNumber2 = 24;
-		String resultMultiple = (inputNumber2 % multiple == 0) ? "¸ÂÀ½" : "¾Æ´Ô";
+		String resultMultiple = (inputNumber2 % multiple == 0) ? "ë§žìŒ" : "ì•„ë‹˜";
 		
-		System.out.println(inputNumber2 + " = " + multiple + "ÀÇ ¹è¼ö " + resultMultiple);
+		System.out.println(inputNumber2 + " = " + multiple + "ì˜ ë°°ìˆ˜ " + resultMultiple);
 		
 		
-		// Áõ°¨¿¬»êÀÚ Å×½ºÆ®
-		System.out.println("------------- Áõ°¨ ¿¬»êÀÚ À§Ä¡¿¡ µû¸¥ °á°ú -----------");
+		// ì¦ê°ì—°ì‚°ìž í…ŒìŠ¤íŠ¸
+		System.out.println("------------- ì¦ê° ì—°ì‚°ìž ìœ„ì¹˜ì— ë”°ë¥¸ ê²°ê³¼ -----------");
 		int a = 10;
 		a++;
 		++a;
-		System.out.println("10 -> a++ -> ++aÀÇ °á°ú : " + a);
+		System.out.println("10 -> a++ -> ++aì˜ ê²°ê³¼ : " + a);
 
 		int b = 10;
 		b--;
 		--b;
-		System.out.println("10 -> b-- -> --bÀÇ °á°ú : " + b); // 8
+		System.out.println("10 -> b-- -> --bì˜ ê²°ê³¼ : " + b); // 8
 		
 		int c;
 		c = a++; // c = a ---> a = a + 1
@@ -87,20 +87,20 @@ public class OperationExam {
 
 }
 
-//½ÇÇà°á°ú
-//10¿¡ ++ ´ÜÇ× ¿¬»ê : 11
-//x¿¡ -- ´ÜÇ× ¿¬»ê : 10
+//ì‹¤í–‰ê²°ê³¼
+//10ì— ++ ë‹¨í•­ ì—°ì‚° : 11
+//xì— -- ë‹¨í•­ ì—°ì‚° : 10
 //30
 //true
-//ÀÛ´Ù
+//ìž‘ë‹¤
 //10x10=100
 //10/5=3
 //10%5=1
-//11 = È¦¼ö
-//24 = 4ÀÇ ¹è¼ö ¸ÂÀ½
-//------------- Áõ°¨ ¿¬»êÀÚ À§Ä¡¿¡ µû¸¥ °á°ú -----------
-//10 -> a++ -> ++aÀÇ °á°ú : 12
-//10 -> b-- -> --bÀÇ °á°ú : 8
+//11 = í™€ìˆ˜
+//24 = 4ì˜ ë°°ìˆ˜ ë§žìŒ
+//------------- ì¦ê° ì—°ì‚°ìž ìœ„ì¹˜ì— ë”°ë¥¸ ê²°ê³¼ -----------
+//10 -> a++ -> ++aì˜ ê²°ê³¼ : 12
+//10 -> b-- -> --bì˜ ê²°ê³¼ : 8
 //a:13
 //c:12
 //------------------------

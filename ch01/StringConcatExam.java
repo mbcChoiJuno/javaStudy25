@@ -1,6 +1,6 @@
 package ch01;
 
-// ¹®ÀÚ¿­ ¿¬°á Å×½ºÆ®
+// ë¬¸ìì—´ ì—°ê²° í…ŒìŠ¤íŠ¸
 public class StringConcatExam {
 
 	public static void main(String[] args) {
@@ -10,12 +10,12 @@ public class StringConcatExam {
 
 	private static void doConcat() {
 		
-		// print("¹®ÀÚ¿­" + "ÀÔ´Ï´Ù.") -> + ¿¬°á ¿¬»êÀÚ
+		// print("ë¬¸ìì—´" + "ì…ë‹ˆë‹¤.") -> + ì—°ê²° ì—°ì‚°ì
 		
 		String str1 = "JDK" + 17.0;
 		System.out.println(str1);
 
-		String str2 = str1 + "Æ¯Â¡";
+		String str2 = str1 + "íŠ¹ì§•";
 		System.out.println(str2);
 
 		String str3 =  "jdk" + 3 + 3.0;
@@ -24,23 +24,23 @@ public class StringConcatExam {
 		String str4 =  3 + 3.0 + "jdk";
 		System.out.println(str4);
 		
-		// ÄÚµå Èå¸§
-		// À§¿¡¼­ ¾Æ·¡·Î
-		// ¿ŞÂÊ¿¡¼­ ¿À¸¥ÂÊÀ¸·Î °¨
+		// ì½”ë“œ íë¦„
+		// ìœ„ì—ì„œ ì•„ë˜ë¡œ
+		// ì™¼ìª½ì—ì„œ ì˜¤ë¥¸ìª½ìœ¼ë¡œ ê°
 		
 		
 		// jo
 		StringBuilder sb = new StringBuilder();
-		sb.append("¹®ÀÚ¿­");
-		sb.append("ÀÔ´Ï´Ù.");
+		sb.append("ë¬¸ìì—´");
+		sb.append("ì…ë‹ˆë‹¤.");
 		System.out.println(sb.toString());
 	}
 
 }
 
-//½ÇÇà°á°ú
+//ì‹¤í–‰ê²°ê³¼
 //JDK17.0
-//JDK17.0Æ¯Â¡
+//JDK17.0íŠ¹ì§•
 //jdk33.0
 //6.0jdk
-//¹®ÀÚ¿­ÀÔ´Ï´Ù.
+//ë¬¸ìì—´ì…ë‹ˆë‹¤.

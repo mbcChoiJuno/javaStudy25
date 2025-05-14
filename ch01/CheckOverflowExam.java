@@ -1,6 +1,6 @@
 package ch01;
 
-// intÇü µ¥ÀÌÅÍ¿¡ °ª ¹üÀ§ ÃÊ°ú½Ã ¿¹¿ÜÃ³¸® ¿¬½À
+// intí˜• ë°ì´í„°ì— ê°’ ë²”ìœ„ ì´ˆê³¼ì‹œ ì˜ˆì™¸ì²˜ë¦¬ ì—°ìŠµ
 public class CheckOverflowExam {
 
 	public static void main(String[] args) {
@@ -18,11 +18,11 @@ public class CheckOverflowExam {
 
 		if (right > 0) {
 			if (left > (Integer.MAX_VALUE - right)) {
-				throw new ArithmeticException("¿À¹öÇÃ·Î¿ì ¹ß»ı");
+				throw new ArithmeticException("ì˜¤ë²„í”Œë¡œìš° ë°œìƒ");
 			}
 		} else {
 			if ((Integer.MIN_VALUE - right) > left) {
-				throw new ArithmeticException("¿À¹öÇÃ·Î¿ì ¹ß»ı");
+				throw new ArithmeticException("ì˜¤ë²„í”Œë¡œìš° ë°œìƒ");
 			}
 		}
 
@@ -39,7 +39,7 @@ public class CheckOverflowExam {
 
 }
 
-//½ÇÇà °á°ú
+//ì‹¤í–‰ ê²°ê³¼
 
-//int °ª ¹üÀ§ ÃÊ°ú ½Ã 
-//Exception in thread "main" java.lang.ArithmeticException: ¿À¹öÇÃ·Î¿ì ¹ß»ı
+//int ê°’ ë²”ìœ„ ì´ˆê³¼ ì‹œ 
+//Exception in thread "main" java.lang.ArithmeticException: ì˜¤ë²„í”Œë¡œìš° ë°œìƒ

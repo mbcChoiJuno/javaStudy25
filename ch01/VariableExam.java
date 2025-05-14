@@ -1,6 +1,6 @@
 package ch01;
 
-//º¯¼ö ¼±¾ğ ¿¬½À
+//ë³€ìˆ˜ ì„ ì–¸ ì—°ìŠµ
 public class VariableExam {
 
 	public static void main(String[] args) {
@@ -8,24 +8,24 @@ public class VariableExam {
 		int mach;
 		int distance;
 		mach = 340;
-		distance = mach * 60 * 60; // À½¼Ó m/s
+		distance = mach * 60 * 60; // ìŒì† m/s
 		
-		System.out.println("¼Ò¸®°¡ 1½Ã°£ µ¿¾È °¡´Â °Å¸®");
+		System.out.println("ì†Œë¦¬ê°€ 1ì‹œê°„ ë™ì•ˆ ê°€ëŠ” ê±°ë¦¬");
 		System.out.println(distance + "m");
 
-		double radius; // ½Ç¼ö Å¸ÀÔÀÇ radius º¯¼ö ¼±¾ğ
-		double area; // ½Ç¼ö Å¸ÀÔÀÇ area º¯¼ö ¼±¾ğ
-		// ½Ç¼öÅ¸ÀÔÀº ¼Ò¼öÁ¡ÀÌ ÀÖ´Ù
+		double radius; // ì‹¤ìˆ˜ íƒ€ì…ì˜ radius ë³€ìˆ˜ ì„ ì–¸
+		double area; // ì‹¤ìˆ˜ íƒ€ì…ì˜ area ë³€ìˆ˜ ì„ ì–¸
+		// ì‹¤ìˆ˜íƒ€ì…ì€ ì†Œìˆ˜ì ì´ ìˆë‹¤
 		
-		radius = 10; // ÃÊ±â°ªÀÌ Á¤¼öÀÌÁö¸¸ ½Ç¼öÅ¸ÀÔÀ¸·Î º¯°æµÊ
+		radius = 10; // ì´ˆê¸°ê°’ì´ ì •ìˆ˜ì´ì§€ë§Œ ì‹¤ìˆ˜íƒ€ì…ìœ¼ë¡œ ë³€ê²½ë¨
 		area = radius * radius *3.14;
-		System.out.print("¹İÁö¸§ÀÌ " + radius + " ÀÎ");
-		System.out.println(" ¿øÀÇ ³ĞÀÌ : " + area);
+		System.out.print("ë°˜ì§€ë¦„ì´ " + radius + " ì¸");
+		System.out.println(" ì›ì˜ ë„“ì´ : " + area);
 	}
 
 }
 
-//½ÇÇà°á°ú
-//¼Ò¸®°¡ 1½Ã°£ µ¿¾È °¡´Â °Å¸®
+//ì‹¤í–‰ê²°ê³¼
+//ì†Œë¦¬ê°€ 1ì‹œê°„ ë™ì•ˆ ê°€ëŠ” ê±°ë¦¬
 //1224000m
-//¹İÁö¸§ÀÌ 10.0 ÀÎ ¿øÀÇ ³ĞÀÌ : 314.0
+//ë°˜ì§€ë¦„ì´ 10.0 ì¸ ì›ì˜ ë„“ì´ : 314.0

@@ -1,6 +1,6 @@
 package ch01;
 
-//Ä³½ºÆÃ Å×½ºÆ® (Çüº¯È¯)
+//ìºìŠ¤íŒ… í…ŒìŠ¤íŠ¸ (í˜•ë³€í™˜)
 public class IntToDouble {
 
 	public static void main(String[] args) {
@@ -25,17 +25,17 @@ public class IntToDouble {
 		System.out.println(String.format(("num3 : %f"), num3));
 
 		int result = num1 - num2;
-		System.out.println("double À¸·Î ´Ù³à¿Â ÈÄ¿¡ num2 °ª º¯°æ ¾ÈµÊ");
+		System.out.println("double ìœ¼ë¡œ ë‹¤ë…€ì˜¨ í›„ì— num2 ê°’ ë³€ê²½ ì•ˆë¨");
 		System.out.println("num1 - num2 : " + result);
 	}
 }
 
-//½ÇÇà°á°ú
+//ì‹¤í–‰ê²°ê³¼
 //num 1 : 123456780
 //num 2 : 123456780
 //num 3 : 1.2345678E8
 //num1 : 123456780
 //num2 : 123456780
 //num3 : 123456780.000000
-//double À¸·Î ´Ù³à¿Â ÈÄ¿¡ num2 °ª º¯°æ ¾ÈµÊ
+//double ìœ¼ë¡œ ë‹¤ë…€ì˜¨ í›„ì— num2 ê°’ ë³€ê²½ ì•ˆë¨
 //num1 - num2 : 0

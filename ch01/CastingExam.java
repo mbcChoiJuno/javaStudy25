@@ -1,6 +1,6 @@
 package ch01;
 
-//Ä³½ºÆÃ Å×½ºÆ® (Çüº¯È¯)
+//ìºìŠ¤íŒ… í…ŒìŠ¤íŠ¸ (í˜•ë³€í™˜)
 public class CastingExam {
 
 	public static void main(String[] args) {
@@ -13,8 +13,8 @@ public class CastingExam {
 		int intValue = 123456789;
 		byte byteValue = (byte) intValue; // int to byte
 
-		System.out.println(String.format("int Å¸ÀÔ °ª Ãâ·Â : %d", intValue)); // byte to int 1
-		System.out.println(String.format("byte Å¸ÀÔ °ª Ãâ·Â : %d", byteValue)); // byte to int 2
+		System.out.println(String.format("int íƒ€ì… ê°’ ì¶œë ¥ : %d", intValue)); // byte to int 1
+		System.out.println(String.format("byte íƒ€ì… ê°’ ì¶œë ¥ : %d", byteValue)); // byte to int 2
 
 //		0111 0101 1011 1100 1101 0001 0101
 //													 0001 0101 -> 21
@@ -24,25 +24,25 @@ public class CastingExam {
 		int mat = 97;
 
 		int total = kor + eng + mat;
-		System.out.println("=========¼ºÀûÇ¥============");
-		System.out.println(String.format("±¹¾î+¿µ¾î+¼öÇĞ ÃÑÁ¡ = %d", total));
+		System.out.println("=========ì„±ì í‘œ============");
+		System.out.println(String.format("êµ­ì–´+ì˜ì–´+ìˆ˜í•™ ì´ì  = %d", total));
 
 		double avg = total / 3;
-		System.out.println(String.format("Æò±Õ Á¡¼ö : %f", avg));
+		System.out.println(String.format("í‰ê·  ì ìˆ˜ : %f", avg));
 
 		float fAvg = total / 3f;
-		System.out.println(String.format("Æò±Õ Á¡¼ö(f) : %f", fAvg));
+		System.out.println(String.format("í‰ê·  ì ìˆ˜(f) : %f", fAvg));
 
 		double dAvg = (double) total / 3;
-		System.out.println(String.format("Æò±Õ Á¡¼ö(d) : %f", dAvg));
+		System.out.println(String.format("í‰ê·  ì ìˆ˜(d) : %f", dAvg));
 	}
 }
 
-//½ÇÇà °á°ú
-//int Å¸ÀÔ °ª Ãâ·Â : 123456789
-//byte Å¸ÀÔ °ª Ãâ·Â : 21
-//=========¼ºÀûÇ¥============
-//±¹¾î+¿µ¾î+¼öÇĞ ÃÑÁ¡ = 281
-//Æò±Õ Á¡¼ö : 93.000000
-//Æò±Õ Á¡¼ö(f) : 93.666664
-//Æò±Õ Á¡¼ö(d) : 93.666667
+//ì‹¤í–‰ ê²°ê³¼
+//int íƒ€ì… ê°’ ì¶œë ¥ : 123456789
+//byte íƒ€ì… ê°’ ì¶œë ¥ : 21
+//=========ì„±ì í‘œ============
+//êµ­ì–´+ì˜ì–´+ìˆ˜í•™ ì´ì  = 281
+//í‰ê·  ì ìˆ˜ : 93.000000
+//í‰ê·  ì ìˆ˜(f) : 93.666664
+//í‰ê·  ì ìˆ˜(d) : 93.666667

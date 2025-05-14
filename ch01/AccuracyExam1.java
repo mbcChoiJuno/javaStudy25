@@ -1,7 +1,7 @@
 package ch01;
 
-// float, doubleÀ» ÅëÇÑ °è»ê ½Ã 
-// ºÎµ¿ ¼Ò¼öÁ¡ ¶§¹®¿¡ µÚ¿¡ °ªÀ» ÃßÁ¤ÇÏ°Ô µÇ¾î Á¤È®ÇÏ°Ô °è»êµÇÁö ¾Ê´Â´Ù.
+// float, doubleì„ í†µí•œ ê³„ì‚° ì‹œ 
+// ë¶€ë™ ì†Œìˆ˜ì  ë•Œë¬¸ì— ë’¤ì— ê°’ì„ ì¶”ì •í•˜ê²Œ ë˜ì–´ ì •í™•í•˜ê²Œ ê³„ì‚°ë˜ì§€ ì•ŠëŠ”ë‹¤.
 public class AccuracyExam1 {
 
 	public static void main(String[] args) {
@@ -13,10 +13,10 @@ public class AccuracyExam1 {
 
 		double result = apple - (piece * piecePer);
 
-		System.out.println(String.format("³²Àº »ç°ú : %f Á¶°¢", result));
+		System.out.println(String.format("ë‚¨ì€ ì‚¬ê³¼ : %f ì¡°ê°", result));
 	}
 
 }
 
-//½ÇÇà °á°ú
-//³²Àº »ç°ú : 0.300000 Á¶°¢
+//ì‹¤í–‰ ê²°ê³¼
+//ë‚¨ì€ ì‚¬ê³¼ : 0.300000 ì¡°ê°

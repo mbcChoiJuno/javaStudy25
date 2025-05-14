@@ -3,7 +3,7 @@ package ch01;
 import java.util.HashMap;
 import java.util.Scanner;
 
-// À¯Àú µ¥ÀÌÅÍ Å¬·¡½º
+// ìœ ì € ë°ì´í„° í´ë˜ìŠ¤
 class UserData {
 	private  String id = "";
 	private  String pw = "";
@@ -22,16 +22,16 @@ class UserData {
 	}
 }
 
-// ³í¸®¿¬»ê Å×½ºÆ®
-// ·Î±×ÀÎ ±â´É ±¸Çö ¿¬½À
+// ë…¼ë¦¬ì—°ì‚° í…ŒìŠ¤íŠ¸
+// ë¡œê·¸ì¸ ê¸°ëŠ¥ êµ¬í˜„ ì—°ìŠµ
 public class LogicalExam {
 
 	static HashMap<String, UserData> userTable = new HashMap<String, UserData>();
 	static Scanner input; 
-	static int scene = 0; // 0 ¸ŞÀÎ È­¸é, 1 °¡ÀÔ È­¸é, 2 ·Î±×ÀÎ È­¸é
+	static int scene = 0; // 0 ë©”ì¸ í™”ë©´, 1 ê°€ì… í™”ë©´, 2 ë¡œê·¸ì¸ í™”ë©´
 
 
-	// ÄÜ¼Ö Á¤¸®¿ë
+	// ì½˜ì†” ì •ë¦¬ìš©
 	private static void ClearDisplay() {
 		for (int i = 0; i < 50; i++) {
 			System.out.println("");
@@ -46,22 +46,22 @@ public class LogicalExam {
 	private static void doLogical() {
 		input = new Scanner(System.in); 
 		
-		// 1. ¸Ş´º Ç¥½Ã
+		// 1. ë©”ë‰´ í‘œì‹œ
 		MoveMainMenu();
 	}
 	
-	// 1. ¸ŞÀÎ ¸Ş´º
-	// È¸¿ø°¡ÀÔ
-	// ·Î±×ÀÎ
+	// 1. ë©”ì¸ ë©”ë‰´
+	// íšŒì›ê°€ì…
+	// ë¡œê·¸ì¸
 	private static void MoveMainMenu() {
 		while (true) {
 			ClearDisplay();
 
-			System.out.println(" ====== ¸ŞÀÎ ¸Ş´º ====== ");
-			System.out.println(" 1. È¸¿ø°¡ÀÔ ");
-			System.out.println(" 2. ·Î±×ÀÎ ");
+			System.out.println(" ====== ë©”ì¸ ë©”ë‰´ ====== ");
+			System.out.println(" 1. íšŒì›ê°€ì… ");
+			System.out.println(" 2. ë¡œê·¸ì¸ ");
 			System.out.println("");
-			System.out.print(" ÀÔ·Â :  ");
+			System.out.print(" ì…ë ¥ :  ");
 			
 			String num = input.nextLine();
 			
@@ -82,13 +82,13 @@ public class LogicalExam {
 		}
 	}
 	
-	// È¸¿ø°¡ÀÔ ¸Ş´º
+	// íšŒì›ê°€ì… ë©”ë‰´
 	private static void MoveRegistMenu() {
 		while (true) {
 			ClearDisplay();
 
-			System.out.println(" ====== È¸¿ø°¡ÀÔ ¸Ş´º ====== ");
-			System.out.print(" °èÁ¤ ÀÔ·Â :  ");
+			System.out.println(" ====== íšŒì›ê°€ì… ë©”ë‰´ ====== ");
+			System.out.print(" ê³„ì • ì…ë ¥ :  ");
 			
 			String id = input.nextLine();
 			
@@ -98,7 +98,7 @@ public class LogicalExam {
 			else {
 
 				System.out.println("");
-				System.out.print(" ÆĞ½º¿öµå ÀÔ·Â :  ");
+				System.out.print(" íŒ¨ìŠ¤ì›Œë“œ ì…ë ¥ :  ");
 				String pw = input.nextLine();
 				
 				userTable.put(id,new UserData(id, pw));
@@ -109,15 +109,15 @@ public class LogicalExam {
 		}
 	}
 
-	// È¸¿ø°¡ÀÔ ¿Ï·á È­¸é
+	// íšŒì›ê°€ì… ì™„ë£Œ í™”ë©´
 	private static void MoveRegistDoneMenu() {
 
 		while (true) {
 			ClearDisplay();
 
-			System.out.println(" ====== È¸¿ø°¡ÀÔ ¸Ş´º ====== ");
-			System.out.println(" °¡ÀÔ ¿Ï·á ");
-			System.out.println(" 1. µ¹¾Æ°¡±â ");
+			System.out.println(" ====== íšŒì›ê°€ì… ë©”ë‰´ ====== ");
+			System.out.println(" ê°€ì… ì™„ë£Œ ");
+			System.out.println(" 1. ëŒì•„ê°€ê¸° ");
 
 			String num = input.nextLine();
 
@@ -128,48 +128,48 @@ public class LogicalExam {
 		}
 	}
 
-	// ·Î±×ÀÎ ¸Ş´º
+	// ë¡œê·¸ì¸ ë©”ë‰´
 	private static void MoveLoginMenu() {
 		ClearDisplay();
 
-		System.out.println(" ====== ·Î±×ÀÎ ¸Ş´º ====== ");
-		System.out.print(" °èÁ¤ ÀÔ·Â :  ");
+		System.out.println(" ====== ë¡œê·¸ì¸ ë©”ë‰´ ====== ");
+		System.out.print(" ê³„ì • ì…ë ¥ :  ");
 		
 		String id = input.nextLine();
 		
 		System.out.println("");
-		System.out.print(" ÆĞ½º¿öµå ÀÔ·Â :  ");
+		System.out.print(" íŒ¨ìŠ¤ì›Œë“œ ì…ë ¥ :  ");
 		String pw = input.nextLine();
 		
 		if (userTable.containsKey(id) && userTable.get(id).getPw().equals(pw)) {
-			// ·Î±×ÀÎ ¼º°ø
+			// ë¡œê·¸ì¸ ì„±ê³µ
 			MoveHomeMenu(id);
 		} else {
-			// ·Î±×ÀÎ ½ÇÆĞ (¾ø´Â °èÁ¤)
-			MoveNullIdMenu("¾ÆÀÌµğ È¤Àº ºñ¹Ğ¹øÈ£°¡ ´Ù¸¨´Ï´Ù.");
+			// ë¡œê·¸ì¸ ì‹¤íŒ¨ (ì—†ëŠ” ê³„ì •)
+			MoveNullIdMenu("ì•„ì´ë”” í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ê°€ ë‹¤ë¦…ë‹ˆë‹¤.");
 		}
 	}
 
-	// È¨ ¸Ş´º
-	// ·Î±×ÀÎ ¼º°ø½Ã È­¸é
+	// í™ˆ ë©”ë‰´
+	// ë¡œê·¸ì¸ ì„±ê³µì‹œ í™”ë©´
 	private static void MoveHomeMenu(String id) {
 
 		ClearDisplay();
-		System.out.println(" ====== È¨ ¸Ş´º ====== ");
-		System.out.println(" °èÁ¤ : " + id);
-		System.out.println(" ·Î±×ÀÎ ¼º°ø ");
+		System.out.println(" ====== í™ˆ ë©”ë‰´ ====== ");
+		System.out.println(" ê³„ì • : " + id);
+		System.out.println(" ë¡œê·¸ì¸ ì„±ê³µ ");
 		
 	}
 
-	// ·Î±×ÀÎ ½ÇÆĞ½Ã È­¸é
+	// ë¡œê·¸ì¸ ì‹¤íŒ¨ì‹œ í™”ë©´
 	private static void MoveNullIdMenu(String msg) {
 
 		while (true) {
 			ClearDisplay();
 
-			System.out.println(" ====== ·Î±×ÀÎ ¸Ş´º ====== ");
+			System.out.println(" ====== ë¡œê·¸ì¸ ë©”ë‰´ ====== ");
 			System.out.println(msg);
-			System.out.println(" 1. µ¹¾Æ°¡±â ");
+			System.out.println(" 1. ëŒì•„ê°€ê¸° ");
 
 			String num = input.nextLine();
 			
@@ -182,7 +182,7 @@ public class LogicalExam {
 
 
 
-	// ¼ö¾÷
+	// ìˆ˜ì—…
 //	public static void main(String[] args) {
 //
 //		String loginId = "juno";
@@ -190,13 +190,13 @@ public class LogicalExam {
 //		
 //		Scanner scanner = new Scanner(System.in); 
 //		
-//		System.out.print("·Î±×ÀÎ ÇÒ ID¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//		System.out.print("ë¡œê·¸ì¸ í•  IDë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 //		String id = scanner.nextLine();
-//		System.out.printf("ÀÔ·ÂÇÏ½Å ID´Â : %s ÀÔ´Ï´Ù. \n\n", id);
+//		System.out.printf("ì…ë ¥í•˜ì‹  IDëŠ” : %s ì…ë‹ˆë‹¤. \n\n", id);
 //
-//		System.out.print("·Î±×ÀÎ ÇÒ PW¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+//		System.out.print("ë¡œê·¸ì¸ í•  PWë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 //		String pw = scanner.nextLine();
-//		System.out.println("°ËÁõ ÁßÀÔ´Ï´Ù.");
+//		System.out.println("ê²€ì¦ ì¤‘ì…ë‹ˆë‹¤.");
 //		
 //		scanner.close();
 //		
@@ -210,43 +210,43 @@ public class LogicalExam {
 	
 //	private static void onLoginFail() {
 //
-//		System.out.println("·Î±×ÀÎ ½ÇÆĞ.");
-//		System.out.println("ID³ª PW°¡ ´Ù¸¨´Ï´Ù.");
+//		System.out.println("ë¡œê·¸ì¸ ì‹¤íŒ¨.");
+//		System.out.println("IDë‚˜ PWê°€ ë‹¤ë¦…ë‹ˆë‹¤.");
 //	}
 //
 //	private static void onLoginSuccess() {
 //
-//		System.out.println("·Î±×ÀÎ ¼º°ø.");
+//		System.out.println("ë¡œê·¸ì¸ ì„±ê³µ.");
 //	}
 	
 }
 
-//½ÇÇà°á°ú
+//ì‹¤í–‰ê²°ê³¼
 
-//====== ¸ŞÀÎ ¸Ş´º ====== 
-//1. È¸¿ø°¡ÀÔ 
-//2. ·Î±×ÀÎ 
+//====== ë©”ì¸ ë©”ë‰´ ====== 
+//1. íšŒì›ê°€ì… 
+//2. ë¡œê·¸ì¸ 
 //
-//ÀÔ·Â :  
+//ì…ë ¥ :  
 
-//====== È¸¿ø°¡ÀÔ ¸Ş´º ====== 
-//°èÁ¤ ÀÔ·Â :  kkk
+//====== íšŒì›ê°€ì… ë©”ë‰´ ====== 
+//ê³„ì • ì…ë ¥ :  kkk
 //
-//ÆĞ½º¿öµå ÀÔ·Â :  
+//íŒ¨ìŠ¤ì›Œë“œ ì…ë ¥ :  
 
-//====== È¸¿ø°¡ÀÔ ¸Ş´º ====== 
-//°¡ÀÔ ¿Ï·á 
-//1. µ¹¾Æ°¡±â 
+//====== íšŒì›ê°€ì… ë©”ë‰´ ====== 
+//ê°€ì… ì™„ë£Œ 
+//1. ëŒì•„ê°€ê¸° 
 
-//====== ·Î±×ÀÎ ¸Ş´º ====== 
-//°èÁ¤ ÀÔ·Â :  kkk
+//====== ë¡œê·¸ì¸ ë©”ë‰´ ====== 
+//ê³„ì • ì…ë ¥ :  kkk
 //
-//ÆĞ½º¿öµå ÀÔ·Â :  
+//íŒ¨ìŠ¤ì›Œë“œ ì…ë ¥ :  
 
-//====== ·Î±×ÀÎ ¸Ş´º ====== 
-//¾ÆÀÌµğ È¤Àº ºñ¹Ğ¹øÈ£°¡ ´Ù¸¨´Ï´Ù.
-//1. µ¹¾Æ°¡±â 
+//====== ë¡œê·¸ì¸ ë©”ë‰´ ====== 
+//ì•„ì´ë”” í˜¹ì€ ë¹„ë°€ë²ˆí˜¸ê°€ ë‹¤ë¦…ë‹ˆë‹¤.
+//1. ëŒì•„ê°€ê¸° 
 
-//====== È¨ ¸Ş´º ====== 
-//°èÁ¤ : kkk
-//·Î±×ÀÎ ¼º°ø 
+//====== í™ˆ ë©”ë‰´ ====== 
+//ê³„ì • : kkk
+//ë¡œê·¸ì¸ ì„±ê³µ 

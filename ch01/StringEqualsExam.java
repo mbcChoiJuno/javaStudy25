@@ -1,6 +1,6 @@
 package ch01;
 
-// ¹®ÀÚ¿­ ºñ±³ Å×½ºÆ®
+// ë¬¸ìì—´ ë¹„êµ í…ŒìŠ¤íŠ¸
 public class StringEqualsExam {
 
 	public static void main(String[] args) {
@@ -10,18 +10,18 @@ public class StringEqualsExam {
 
 	private static void doEquals() {
 
-		String strval1 = "ÃÖÁØ¿À";
-		String strval2 = "ÃÖÁØ¿À";
-		String strval3 = new String("ÃÖÁØ¿À");
+		String strval1 = "ìµœì¤€ì˜¤";
+		String strval2 = "ìµœì¤€ì˜¤";
+		String strval3 = new String("ìµœì¤€ì˜¤");
 
 		System.out.println(strval1 == strval2);
 		System.out.println(strval1.toString());
 		System.out.println(strval3.toString());
 		System.out.println(strval1.toString() == strval3.toString());
 
-		// °´Ã¼ÀÇ °ª ºñ±³¸¦ À§ÇØ¼­´Â ³»ºÎ ¸Ş¼­µå »ç¿ë
+		// ê°ì²´ì˜ ê°’ ë¹„êµë¥¼ ìœ„í•´ì„œëŠ” ë‚´ë¶€ ë©”ì„œë“œ ì‚¬ìš©
 		boolean eq1 = strval1.equals(strval3);
-		System.out.println("StringÀÇ equals ¸Ş¼­µå »ç¿ë °á°ú: " + eq1);
+		System.out.println("Stringì˜ equals ë©”ì„œë“œ ì‚¬ìš© ê²°ê³¼: " + eq1);
 
 		// jo
 		System.out.println(strval1.equals(strval3));
@@ -29,10 +29,10 @@ public class StringEqualsExam {
 
 }
 
-//½ÇÇà°á°ú
+//ì‹¤í–‰ê²°ê³¼
 //true
-//ÃÖÁØ¿À
-//ÃÖÁØ¿À
+//ìµœì¤€ì˜¤
+//ìµœì¤€ì˜¤
 //false
-//StringÀÇ equals ¸Ş¼­µå »ç¿ë °á°ú: true
+//Stringì˜ equals ë©”ì„œë“œ ì‚¬ìš© ê²°ê³¼: true
 //true

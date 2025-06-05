@@ -1,6 +1,6 @@
  
  /*
-     TEST ����
+     TEST 모음
  */
  
  
@@ -18,16 +18,16 @@
  SELECT D1.DEPTNO, D1.DNAME, AVG(E1.SAL) as avg_sal, MAX(E1.SAL), MIN(E1.SAL), LENGTH(E1.DEPTNO) FROM dept D1, emp E1 WHERE (D1.DEPTNO = E1.DEPTNO) ORDER BY D1.DEPTNO; 
  
  -- test2 ( SQL-99 )
- -- �����ϰ� ���� �������� �Ѿ
+ -- 중지하고 다음 수업으로 넘어감
  
  
  
  
  /* 
-  287p ~ 289p �׽�Ʈ 
+  287p ~ 289p 테스트 
  */
  
- -- test �غ����
+ -- test 준비사항
  CREATE TABLE CHAP10HW_EMP AS SELECT * FROM EMP;
  
  CREATE TABLE CHAP10HW_DEPT AS SELECT * FROM DEPT;
@@ -103,7 +103,7 @@
  
  COMMIT;
  
- -- test 5 ���� �׽�Ʈ��
+ -- test 5 조건 테스트용
  SELECT E.EMPNO FROM CHAP10HW_EMP E JOIN CHAP10HW_SALGRADE S ON (E.SAL BETWEEN S.LOSAL and S.HISAL) WHERE S.GRADE = 5;
  
  
@@ -111,7 +111,7 @@
  
  /* 
      324p ~ 325p  
-     �׽�Ʈ 
+     테스트 
  */
  
  -- test 1

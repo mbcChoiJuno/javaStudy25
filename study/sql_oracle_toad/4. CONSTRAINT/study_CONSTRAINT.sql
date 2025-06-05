@@ -2,20 +2,20 @@
  /*
      Constraint
      
-     Á¦¾àÁ¶°Ç
+     ì œì•½ì¡°ê±´
      
-     Æ¯Á¤ÇÑ Å×ÀÌºíÀÇ ¿­(cols) ÇÊµå¿¡  À¯ÀÏÇÑ °ªÀÎÁö ¿©ºÎ, NULLÀ» Çã¿ëÇÏ´ÂÁö ¿©ºÎ µî 
-     Á¦¾à ¼Ó¼ºÀ» ºÎ¿©ÇÔÀ¸·Î½á
+     íŠ¹ì •í•œ í…Œì´ë¸”ì˜ ì—´(cols) í•„ë“œì—  ìœ ì¼í•œ ê°’ì¸ì§€ ì—¬ë¶€, NULLì„ í—ˆìš©í•˜ëŠ”ì§€ ì—¬ë¶€ ë“± 
+     ì œì•½ ì†ì„±ì„ ë¶€ì—¬í•¨ìœ¼ë¡œì¨
      
-     ¿©·¯ Å×ÀÌºíÀÌ ¿«ÀÌ´Â º¹ÀâÇÑ ±¸Á¶ ¼Ó¿¡¼­
-     µ¥ÀÌÅÍ ¹«°á¼ºÀ» ÁöÅ²´Ù.
+     ì—¬ëŸ¬ í…Œì´ë¸”ì´ ì—®ì´ëŠ” ë³µìž¡í•œ êµ¬ì¡° ì†ì—ì„œ
+     ë°ì´í„° ë¬´ê²°ì„±ì„ ì§€í‚¨ë‹¤.
      
-     µ¥ÀÌÅÍ ¹«°á¼º: Á¤È®¼º + ÀÏ°ü¼º
+     ë°ì´í„° ë¬´ê²°ì„±: ì •í™•ì„± + ì¼ê´€ì„±
  */
 
  /* 
     359p ~ 393p
-    Á¦¾à Á¶°Ç ¿¬½À
+    ì œì•½ ì¡°ê±´ ì—°ìŠµ
     
  */
  
@@ -27,37 +27,37 @@
  );
  DESC table_notnull;
  
- -- 362p  NOT NULL¿¡ NULLÀÌ µé¾î°¡¸é ¿À·ù ¹ß»ý
+ -- 362p  NOT NULLì— NULLì´ ë“¤ì–´ê°€ë©´ ì˜¤ë¥˜ ë°œìƒ
  INSERT INTO table_notnull VALUES('TEST_ID_01', NULL, '010-1234-5678');
  
- -- 363p  Á¤»ó ÀÛµ¿
+ -- 363p  ì •ìƒ ìž‘ë™
  INSERT INTO table_notnull VALUES('TEST_ID_01', '1234', NULL);
  
- -- È®ÀÎ¿ë
+ -- í™•ì¸ìš©
  SELECT * FROM table_notnull;
  
- -- 363p  TEST_ID_01 À¯ÀúÀÇ login_pwdÇÊµå(NOT NULL)¸¦  NULL°ªÀ¸·Î ¼öÁ¤ ½Ãµµ
+ -- 363p  TEST_ID_01 ìœ ì €ì˜ login_pwdí•„ë“œ(NOT NULL)ë¥¼  NULLê°’ìœ¼ë¡œ ìˆ˜ì • ì‹œë„
  UPDATE table_notnull SET login_pwd = NULL WHERE login_id = 'TEST_ID_01';
  
  
  
  /*
     364p
-    Á¦¾àÁ¶°Ç °´Ã¼ È®ÀÎ
+    ì œì•½ì¡°ê±´ ê°ì²´ í™•ì¸
     
  */
  
- -- 364p Á¦¾àÁ¶°Ç »ìÆìº¸±â
+ -- 364p ì œì•½ì¡°ê±´ ì‚´íŽ´ë³´ê¸°
  SELECT * FROM USER_CONSTRAINTS;
  
  
  /*
     365p
-    Á¦¾àÁ¶°Ç ÀÌ¸§ Á÷Á¢ ÁöÁ¤   CONSTRAINT -Á¶°Ç¸í- Á¦¾àÁ¶°Ç
+    ì œì•½ì¡°ê±´ ì´ë¦„ ì§ì ‘ ì§€ì •   CONSTRAINT -ì¡°ê±´ëª…- ì œì•½ì¡°ê±´
     
  */
  
- -- 365p Å×ÀÌºí »ý¼ºÇÏ¸é¼­ ¹Ù·Î Á¦¾àÁ¶°Ç ÁöÁ¤
+ -- 365p í…Œì´ë¸” ìƒì„±í•˜ë©´ì„œ ë°”ë¡œ ì œì•½ì¡°ê±´ ì§€ì •
  CREATE TABLE table_notnull2(
     login_id    VARCHAR(20) CONSTRAINT TBLNN2_LGNID_NN NOT NULL,
     login_pwd   VARCHAR(20) CONSTRAINT TBLNN2_LGNPW_NN NOT NULL,
@@ -67,42 +67,42 @@
  SELECT * FROM USER_CONSTRAINTS;
  
  
- -- 366p  ÀÌ¹Ì »ý¼ºµÈ Å×ÀÌºí¿¡  Á¦¾àÁ¶°Ç ºÎ¿© ½Ã
- -- tel ¿­(cols)¿¡ nullÀÌ ÀÌ¹Ì ÀÖ¾î¼­ NOT NULL ºÎ¿© ºÒ°¡ÇÔ
+ -- 366p  ì´ë¯¸ ìƒì„±ëœ í…Œì´ë¸”ì—  ì œì•½ì¡°ê±´ ë¶€ì—¬ ì‹œ
+ -- tel ì—´(cols)ì— nullì´ ì´ë¯¸ ìžˆì–´ì„œ NOT NULL ë¶€ì—¬ ë¶ˆê°€í•¨
  ALTER TABLE table_notnull MODIFY (tel NOT NULL);
  
- -- 366p  tel ¿­µ¥ÀÌÅÍ ¼öÁ¤
+ -- 366p  tel ì—´ë°ì´í„° ìˆ˜ì •
  UPDATE table_notnull SET tel = '010-1234-5678' WHERE login_id = 'TEST_ID_01';
  
  SELECT * FROM table_notnull;
  
- -- 367p  ´Ù½ÃÇÑ¹ø NOT NULL ºÎ¿©
+ -- 367p  ë‹¤ì‹œí•œë²ˆ NOT NULL ë¶€ì—¬
  ALTER TABLE table_notnull MODIFY (tel NOT NULL);
  
- -- 367p  Á¦¾àÁ¶°Ç¿¡ ÀÌ¸§ ÁöÁ¤ÇØ¼­ Ãß°¡
+ -- 367p  ì œì•½ì¡°ê±´ì— ì´ë¦„ ì§€ì •í•´ì„œ ì¶”ê°€
  ALTER TABLE table_notnull2 MODIFY (tel CONSTRAINT TBLNN_TEL_NN2 NOT NULL);
  
  SELECT * FROM USER_CONSTRAINTS;
  
  /* 
     368p
-    ÀÌ¹Ì »ý¼ºµÈ Á¦¾àÁ¶°Ç ÀÌ¸§ º¯°æ
+    ì´ë¯¸ ìƒì„±ëœ ì œì•½ì¡°ê±´ ì´ë¦„ ë³€ê²½
  
  */
  
- -- 368p  ÀÌ¹Ì »ý¼ºµÈ Á¦¾àÁ¶°Ç  ÀÌ¸§ º¯°æ
+ -- 368p  ì´ë¯¸ ìƒì„±ëœ ì œì•½ì¡°ê±´  ì´ë¦„ ë³€ê²½
  ALTER TABLE table_notnull2 RENAME CONSTRAINT tblnn_tel_nn2 to tblnn2_tel_nn;
  
- -- 369p  Á¦¾àÁ¶°Ç »èÁ¦ÇÏ±â
+ -- 369p  ì œì•½ì¡°ê±´ ì‚­ì œí•˜ê¸°
  ALTER TABLE table_notnull2 DROP CONSTRAINT tblnn_tel_nn2;
  
  
  /*
     370p
-    Áßº¹µÇÁö ¾Ê´Â °ª UNIQUE
+    ì¤‘ë³µë˜ì§€ ì•ŠëŠ” ê°’ UNIQUE
  */
  
- -- 370p  Å×ÀÌºí »ý¼ºÇÏ¸é¼­ Á¦¾àÁ¶°Ç UNIQUE ºÎ¿©ÇÏ±â
+ -- 370p  í…Œì´ë¸” ìƒì„±í•˜ë©´ì„œ ì œì•½ì¡°ê±´ UNIQUE ë¶€ì—¬í•˜ê¸°
  CREATE TABLE table_unique (
     login_id    VARCHAR2(20) CONSTRAINT table_unique_login_id_u UNIQUE,
     login_pwd   VARCHAR2(20) CONSTRAINT table_unique_login_pw_nn NOT NULL,
@@ -111,31 +111,31 @@
  
  SELECT * FROM USER_CONSTRAINTS WHERE table_name = 'TABLE_UNIQUE';
  
- -- 371p unique ÇÊµå¿¡ ¾ÆÀÌµð ÀÔ·Â1
+ -- 371p unique í•„ë“œì— ì•„ì´ë”” ìž…ë ¥1
  INSERT INTO table_unique (login_id, login_pwd, tel) VALUES ('TEST_ID_01', 'PWD01', '010-1234-5678');
  
  SELECT * FROM table_unique;
  
- -- 371p unique ÇÊµå¿¡ ¾ÆÀÌµð ÀÔ·Â2 = Áßº¹À¸·Î ¹«°á¼º À§¹è ¿À·ù
+ -- 371p unique í•„ë“œì— ì•„ì´ë”” ìž…ë ¥2 = ì¤‘ë³µìœ¼ë¡œ ë¬´ê²°ì„± ìœ„ë°° ì˜¤ë¥˜
  INSERT INTO table_unique (login_id, login_pwd, tel) VALUES ('TEST_ID_01', 'PWD01', '010-1234-5678');
  
- -- 372p ´Ù¸¥ ID ÀÔ·Â½Ã Á¤»ó ÀÔ·ÂµÊ
+ -- 372p ë‹¤ë¥¸ ID ìž…ë ¥ì‹œ ì •ìƒ ìž…ë ¥ë¨
  INSERT INTO table_unique (login_id, login_pwd, tel) VALUES ('TEST_ID_02', 'PWD01', '010-1234-5678');
 
- -- 372p unique Á¦¾àÀÌ ÀÖ¾îµµ  Áßº¹Àº 2¹ø 3¹ø °è¼Ó µé¾î°¨
+ -- 372p unique ì œì•½ì´ ìžˆì–´ë„  ì¤‘ë³µì€ 2ë²ˆ 3ë²ˆ ê³„ì† ë“¤ì–´ê°
  INSERT INTO table_unique (login_id, login_pwd, tel) VALUES (NULL, 'PWD01', '010-1234-5678');
  
- -- 373p unique Á¦¾à ÇÊµå¿¡ µ¥ÀÌÅÍ ¼öÁ¤ÇÏ±â  ÀÌ¹Ì ÀÖ´Â ID¶ó  ¹«°á¼º À§¹è ¿À·ù
+ -- 373p unique ì œì•½ í•„ë“œì— ë°ì´í„° ìˆ˜ì •í•˜ê¸°  ì´ë¯¸ ìžˆëŠ” IDë¼  ë¬´ê²°ì„± ìœ„ë°° ì˜¤ë¥˜
  UPDATE table_unique SET login_id = 'TEST_ID_01' WHERE login_id IS NULL;
  
  
- -- 373p Å×ÀÌºí »ý¼ºÇÒ¶§ unique Á¦¾à ÀÌ¸§ ¸¸µé±â
- -- À§¿¡¼­ ÀÌ¹Ì ±×·¸°Ô ÇÔ
+ -- 373p í…Œì´ë¸” ìƒì„±í• ë•Œ unique ì œì•½ ì´ë¦„ ë§Œë“¤ê¸°
+ -- ìœ„ì—ì„œ ì´ë¯¸ ê·¸ë ‡ê²Œ í•¨
  
  
  /* 
     377p
-    °íÀ¯ Å°
+    ê³ ìœ  í‚¤
     PRIMARY KEY
  
  */
@@ -158,18 +158,18 @@
     
  */
  
- -- 379p   PRIMARY KEY´Â  Áßº¹°ª, NULLÀÌ Çã¿ëµÇÁö ¾ÊÀ½  µ¥ÀÌÅÍÀÔ·Â 1
+ -- 379p   PRIMARY KEYëŠ”  ì¤‘ë³µê°’, NULLì´ í—ˆìš©ë˜ì§€ ì•ŠìŒ  ë°ì´í„°ìž…ë ¥ 1
  INSERT INTO table_pk VALUES('TEST_ID_01', 'PWD01', '010-6800-3743');
  
  SELECT * FROM table_pk;
  
- -- 379p   PRIMARY KEY´Â  Áßº¹°ª, NULLÀÌ Çã¿ëµÇÁö ¾ÊÀ½  µ¥ÀÌÅÍÀÔ·Â 2  -> ¹«°á¼º À§¹è ¿À·ù
+ -- 379p   PRIMARY KEYëŠ”  ì¤‘ë³µê°’, NULLì´ í—ˆìš©ë˜ì§€ ì•ŠìŒ  ë°ì´í„°ìž…ë ¥ 2  -> ë¬´ê²°ì„± ìœ„ë°° ì˜¤ë¥˜
  INSERT INTO table_pk VALUES('TEST_ID_01', 'PWD02', '010-6800-3743');
  
- -- 380p   PRIMARY KEY´Â  Áßº¹°ª, NULLÀÌ Çã¿ëµÇÁö ¾ÊÀ½  µ¥ÀÌÅÍÀÔ·Â 3  -> ¹«°á¼º À§¹è ¿À·ù
+ -- 380p   PRIMARY KEYëŠ”  ì¤‘ë³µê°’, NULLì´ í—ˆìš©ë˜ì§€ ì•ŠìŒ  ë°ì´í„°ìž…ë ¥ 3  -> ë¬´ê²°ì„± ìœ„ë°° ì˜¤ë¥˜
  INSERT INTO table_pk VALUES(NULL, 'PWD03', '010-6800-3743');
  
- -- 380p   PRIMARY KEY´Â  ¾Ï½ÃÀûÀ¸·Î NULLÀ» ³Ö¾îµµ  -> ¹«°á¼º À§¹è ¿À·ù
+ -- 380p   PRIMARY KEYëŠ”  ì•”ì‹œì ìœ¼ë¡œ NULLì„ ë„£ì–´ë„  -> ë¬´ê²°ì„± ìœ„ë°° ì˜¤ë¥˜
  INSERT INTO table_pk (login_pw, tel) VALUES('PWD03', '010-6800-3743');
  
  
@@ -179,21 +179,21 @@
     
  */
  
- -- 382p  Å×½ºÆ®¿ë SCOTT °èÁ¤ Å×ÀÌºíÀÇ  Á¦¾àÁ¶°Ç »ìÆìº¸±â
+ -- 382p  í…ŒìŠ¤íŠ¸ìš© SCOTT ê³„ì • í…Œì´ë¸”ì˜  ì œì•½ì¡°ê±´ ì‚´íŽ´ë³´ê¸°
  SELECT OWNER, CONSTRAINT_NAME, CONSTRAINT_TYPE, TABLE_NAME, R_OWNER, R_CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE TABLE_NAME IN ('EMP', 'DEPT'); 
  
- -- 383p  FK°¡ ÂüÁ¶ÇÏ´Â ¿­¿¡ Á¸ÀçÇÏÁö ¾Ê´Â µ¥ÀÌÅÍ ÀÔ·ÂÇÏ±â  deptnoÀº 10~40¹Û¿¡ ¾øÀ½
- INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (9999, 'È«±æµ¿', 'CLERK', '7788', TO_DATE('2025-06-04','YYYY/MM/DD'), 1200, NULL, 50);
+ -- 383p  FKê°€ ì°¸ì¡°í•˜ëŠ” ì—´ì— ì¡´ìž¬í•˜ì§€ ì•ŠëŠ” ë°ì´í„° ìž…ë ¥í•˜ê¸°  deptnoì€ 10~40ë°–ì— ì—†ìŒ
+ INSERT INTO emp (empno, ename, job, mgr, hiredate, sal, comm, deptno) VALUES (9999, 'í™ê¸¸ë™', 'CLERK', '7788', TO_DATE('2025-06-04','YYYY/MM/DD'), 1200, NULL, 50);
  
  
- -- 384p  PK¸¦ °¡Áø dept fk Å×ÀÌºí ¸¸µé±â
+ -- 384p  PKë¥¼ ê°€ì§„ dept fk í…Œì´ë¸” ë§Œë“¤ê¸°
  CREATE TABLE dept_fk (
     deptno  NUMBER(2) CONSTRAINT deptfk_deptno_pk PRIMARY KEY,
     dname   VARCHAR2(14),
     loc     VARCHAR2(13)
  );
  
- -- 385p  PK¸¦ °¡Áö°í,  fk·Î  dept fk¸¦ ¹Ù¶óº¸´Â  emp fk Å×ÀÌºí ¸¸µé±â
+ -- 385p  PKë¥¼ ê°€ì§€ê³ ,  fkë¡œ  dept fkë¥¼ ë°”ë¼ë³´ëŠ”  emp fk í…Œì´ë¸” ë§Œë“¤ê¸°
  CREATE TABLE emp_fk(
     empno       NUMBER(2) CONSTRAINT empfk_empno_pk PRIMARY KEY,
     ename       VARCHAR2(10),
@@ -207,39 +207,39 @@
  
  SELECT * FROM emp_fk;
  
- -- 386p  ÃÊ±â´Ü°è·Î  dept fk Å×ÀÌºí¿¡ µ¥ÀÌÅÍ°¡ ¾ø¾î,  emp fk Å×ÀÌºí¿¡ µ¥ÀÌÅÍ¸¦ ³ÖÀ¸·Á°í ÇÏ¸é  ¹«°á¼º ¿À·ù
+ -- 386p  ì´ˆê¸°ë‹¨ê³„ë¡œ  dept fk í…Œì´ë¸”ì— ë°ì´í„°ê°€ ì—†ì–´,  emp fk í…Œì´ë¸”ì— ë°ì´í„°ë¥¼ ë„£ìœ¼ë ¤ê³  í•˜ë©´  ë¬´ê²°ì„± ì˜¤ë¥˜
  INSERT INTO emp_fk VALUES (99, 'TEST_NAME', 'TEST_JOB', NULL, TO_DATE('2025-06-04','YYYY/MM/DD'), 3000, NULL, 10);
  
- -- 386p  dept fk Å×ÀÌºí¿¡ µ¥ÀÌÅÍ »ðÀÔÇÏ±â
+ -- 386p  dept fk í…Œì´ë¸”ì— ë°ì´í„° ì‚½ìž…í•˜ê¸°
  INSERT INTO dept_fk VALUES (10, 'TEST_DNAME', 'TEST_LOC');
  
- -- 386p  fk ÂüÁ¶ Å×ÀÌºí¿¡ µ¥ÀÌÅÍ ³ÖÀºÈÄ  emp Å×ÀÌºí¿¡ µ¥ÀÌÅÍ ³ÖÀ¸¸é ÀÛµ¿
+ -- 386p  fk ì°¸ì¡° í…Œì´ë¸”ì— ë°ì´í„° ë„£ì€í›„  emp í…Œì´ë¸”ì— ë°ì´í„° ë„£ìœ¼ë©´ ìž‘ë™
  INSERT INTO emp_fk VALUES (99, 'TEST_NAME', 'TEST_JOB', NULL, TO_DATE('2025-06-04','YYYY/MM/DD'), 3000, NULL, 10);
  
  SELECT * FROM emp_fk;
  
  
- -- 387p  dept_fk Å×ÀÌºíÀÇ 10¹ø ºÎ¼­ µ¥ÀÌÅÍ »èÁ¦ ½Ãµµ  = deptno 10À» ÂüÁ¶ÇÏ´Â Å×ÀÌºíÀÌ ÀÖ¾î¼­ ¹«°á¼º ¿À·ù
+ -- 387p  dept_fk í…Œì´ë¸”ì˜ 10ë²ˆ ë¶€ì„œ ë°ì´í„° ì‚­ì œ ì‹œë„  = deptno 10ì„ ì°¸ì¡°í•˜ëŠ” í…Œì´ë¸”ì´ ìžˆì–´ì„œ ë¬´ê²°ì„± ì˜¤ë¥˜
  DELETE FROM dept_fk WHERE deptno = 10; 
  
  
  
  /*
     390p
-    CHECK Á¦¾àÁ¶°Ç
+    CHECK ì œì•½ì¡°ê±´
  */
  
- -- 390p  Å×ÀÌºí »ý¼ºÇÒ¶§ check Á¦¾àÁ¶°Ç ³Ö±â
+ -- 390p  í…Œì´ë¸” ìƒì„±í• ë•Œ check ì œì•½ì¡°ê±´ ë„£ê¸°
  CREATE TABLE table_check (
     login_id    VARCHAR2(20) CONSTRAINT tblck_loginid_pk PRIMARY KEY,
     login_pwd   VARCHAR2(20) CONSTRAINT tblck_loginpw_ck CHECK (LENGTH(login_pwd) > 3),
     tel         VARCHAR2(20)
  );
  
- -- 390p  check Á¦¾àÁ¶°Ç¿¡ ¸ÂÁö¾Ê´Â °ª ÀÔ·Â ½Ã  ¹«°á¼º À§¹è·Î ¿À·ù
+ -- 390p  check ì œì•½ì¡°ê±´ì— ë§žì§€ì•ŠëŠ” ê°’ ìž…ë ¥ ì‹œ  ë¬´ê²°ì„± ìœ„ë°°ë¡œ ì˜¤ë¥˜
  INSERT INTO table_check VALUES ('TEST_ID_01', '123', '010-6800-3743');
  
- -- 391p  check Á¦¾àÁ¶°Ç¿¡ ¸Â´Â °ª ÀÔ·Â½Ã Á¤»óÀÛµ¿
+ -- 391p  check ì œì•½ì¡°ê±´ì— ë§žëŠ” ê°’ ìž…ë ¥ì‹œ ì •ìƒìž‘ë™
  INSERT INTO table_check VALUES ('TEST_ID_01', '1234', '010-6800-3743');
  
  SELECT * FROM table_check;
@@ -248,21 +248,21 @@
  
  /*
     392p
-    DEFAULT Á¦¾àÁ¶°Ç
+    DEFAULT ì œì•½ì¡°ê±´
  */
  
- -- 392p  default Á¶°ÇÀ» °É°í  Å×ÀÌºí»ý¼º
+ -- 392p  default ì¡°ê±´ì„ ê±¸ê³   í…Œì´ë¸”ìƒì„±
  CREATE TABLE table_default(
     login_id    VARCHAR2(20) CONSTRAINT tblck2_loginid_pk PRIMARY KEY,
     login_pwd   VARCHAR2(20) DEFAULT '1234',
     tel         VARCHAR2(20)
  );
  
- -- 392p  default·Î ÁöÁ¤ÇÑ ÇÊµå  null·Î ÀÔ·Â
+ -- 392p  defaultë¡œ ì§€ì •í•œ í•„ë“œ  nullë¡œ ìž…ë ¥
  INSERT INTO table_default VALUES ('TEST_ID_01', NULL, '010-4561-7897');
  
- SELECT * FROM table_default; -- NULLÀÌ¶ó¼­ NULL·Î ÁöÁ¤µÇ¾î µé¾î°¨
+ SELECT * FROM table_default; -- NULLì´ë¼ì„œ NULLë¡œ ì§€ì •ë˜ì–´ ë“¤ì–´ê°
  
  INSERT INTO table_default (login_id, tel) VALUES ('TEST_ID_02', '010-1234-1233');
  
- SELECT * FROM table_default; -- ¾Ï½ÃÀûÀ¸·Î ¾Æ¹«°Íµµ ³ÖÁö¾ÊÀ¸¸é  NULL ´ë½Å DEFAULT value°¡ µé¾î°¨
+ SELECT * FROM table_default; -- ì•”ì‹œì ìœ¼ë¡œ ì•„ë¬´ê²ƒë„ ë„£ì§€ì•Šìœ¼ë©´  NULL ëŒ€ì‹  DEFAULT valueê°€ ë“¤ì–´ê°
